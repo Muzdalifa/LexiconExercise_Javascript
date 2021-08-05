@@ -118,13 +118,14 @@ function stringCombination(){
   userInputArray = userInput.split("");
   let result = [];
   for (let i = 0; i < userInputArray.length; i++) {
-     result.push(userInputArray[i]);
-     while(i < userInputArray.length )
-     {
-      result.push(userInputArray[i]);
-     }   
-  } 
+    for (let j = i + 1; j <= userInputArray.length; j++) {
+      let subString = userInput.substring(i,j)
+      if(subString !== ""){
+        result.push(subString);  
+      }      
+    }   
+  }  
   
   console.log(result);
-  document.getElementById("q7").innerHTML = `The combination of string is : ${result.join().replaceAll(",", "")}`;    
+  document.getElementById("q7").innerHTML = `The combination of string is : ${result}`;    
 }
