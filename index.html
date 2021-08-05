@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Javascript exercise</title>
+  <link>
+</head>
+<body>
+
+<h2>Question 1: Current time</h2>
+<p id="currentTime"></p>
+
+<h2>Question 2: Leap Year Calenda</h2>
+<label> Enter a year then press enter :</label>
+<input type="number" onkeydown="findLeapYear(this)"/>
+<p id="isLeapYear"></p>
+
+<h2>Question 3: 1st of January = Sunday?</h2>
+<label> Enter a year to test if it's 1st date state on sunday :</label>
+<input type="number" id="isSunday"/>
+<button onclick="januaryFirstIsSunday()">Submit</button>
+<p id="q3"></p>
+
+<h2>Question 4: Guessing game</h2>
+<label> Enter a number to guess :</label>
+<input type="number" min="1" max="10" id="numberToguess"/>
+<button onclick="guessNumber()">Submit</button>
+<p id="q4"></p>
+
+<h2>Question 5: Days until Christmas</h2>
+<p id="q5"></p>
+
+<h2>Question 6:  Reverse input</h2>
+<label> Enter a string to reverse :</label>
+<input type="text" id="reverse"/>
+<button onclick="reverseString()">Reverse</button>
+<p id="q6"></p>
+
+<h2>Question 7: Text manipulation</h2>
+<label> Enter a string to manipulate :</label>
+<input type="text" id="textManip"/>
+<button onclick="stringCombination()">Manipulate</button>
+<p id="q7"></p>
+
+
+<script src="myjavascript.js">
+</script>
+
+</body>
+</html>
