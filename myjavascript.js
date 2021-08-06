@@ -179,3 +179,48 @@ function longestWord(){
   document.getElementById("q9").innerHTML =
            result.sort().join(",").replaceAll(",", " "); 
 }
+
+// Exercise 10 – Prime number
+// Add an input field that lets you enter a number, and tie a script to it that checks whether the number 
+// entered is a prime or not.
+// Required Features:
+// • An input field that takes a number and calls the script when submitted. The page should not be 
+// refreshed.
+// • A script that checks whether the number entered is a prime, and presents the result on the page, 
+// as a message.
+function checkPrimeNumber(){
+  let number = document.getElementById("isPrime").value;
+  isPrime= false;
+
+  if (number < 0)
+    number = Math.abs(number);
+
+  if(number === 1 || number == 2){
+    document.getElementById("q10").innerHTML =
+             "The number is prime number";
+  }
+  else{
+    for (let index = 2; index <= number; index++) {
+      if(number % index === 1)
+      {
+        isPrime = true;
+        continue;
+      }
+      else{
+        break;
+      }
+    }
+  
+    if(isPrime)
+    {
+      document.getElementById("q10").innerHTML =
+               "The number is prime number";
+    }
+   else{
+        document.getElementById("q10").innerHTML = 
+                "The number is not a prime number";
+      } 
+  }  
+}
+
+
