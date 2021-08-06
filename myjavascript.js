@@ -284,3 +284,17 @@ function joinArray(){
 }
 joinArray()
 
+// Exercise 15 – Array 2
+// Add a script that will sort the numbers in an array according to size and display it.
+// Sample array: var numbers = [4, 1, 9, -2, 5]
+// Expected output: -2, 1, 4, 5, 9.
+// Required Features:
+// • An input field that takes an array of numbers and calls the script when submitted. The page 
+// should not be refreshed.
+// • A script that will take the numbers in an array and sort the according to size and presents the 
+// result on the page, as a message
+function sortNumbers(){
+let numArray = document.getElementById("sort").value;
+  document.getElementById("q15").innerHTML = numArray.split(",").sort();
+}
+
