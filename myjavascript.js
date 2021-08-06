@@ -323,5 +323,21 @@ function removeNullAndZero(){
   let userInput = document.getElementById("nullAndZero").value;
   console.log(userInput.split(","))
   document.getElementById("q17").innerHTML = userInput.split(",").filter( x => x !=="" && x !=0 );
+}
+
+// Exercise 18 – Number of days in a month
+// Add a script that will find and display the number of days in a given month.
+// Required Features:
+// • Two input fields that takes a month and a year and then calls the script when submitted. The 
+// page should not be refreshed.
+// • A script that will find the month and year and gets the number of days in that month and 
+// presents the result on the page, as a message 
+
+function numberOfDaysInMonth(){
+  let month = document.getElementById("month").value;
+  let year = document.getElementById("year").value;
+
+  const d = new Date(year, month, 0).getDate()
+  document.getElementById("q18").innerHTML = `The number of days is ${d}`;
 
 }
