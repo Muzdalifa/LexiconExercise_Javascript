@@ -8,7 +8,9 @@
 
 function time(){
   let d = new Date();
-  d = new Intl.DateTimeFormat('en-GB', { weekday:'long' }).format(d) + ', ' + new Intl.DateTimeFormat('en-GB', { dateStyle: 'short'}).format(d) +' '+ new Intl.DateTimeFormat('en-GB', {timeStyle: 'medium' }).format(d)
+  d = new Intl.DateTimeFormat('en-GB', { weekday:'long' }).format(d) +
+             ', ' + new Intl.DateTimeFormat('en-GB', { dateStyle: 'short'}).format(d) +
+             ' '+ new Intl.DateTimeFormat('en-GB', {timeStyle: 'medium' }).format(d)
   document.getElementById("currentTime").innerHTML = d;
 }
 setInterval(time, 1000);
@@ -25,9 +27,11 @@ setInterval(time, 1000);
 function findLeapYear(val){  
   if(((val.value % 4 == 0) && (val.value % 100 != 0)) || (val.value % 400 == 0))
   {
-    return document.getElementById("isLeapYear").innerHTML = val.value + " is a leap year.";
+    return document.getElementById("isLeapYear").innerHTML =
+             val.value + " is a leap year.";
   }else{
-    return document.getElementById("isLeapYear").innerHTML = val.value + " is not a leap year.";
+    return document.getElementById("isLeapYear").innerHTML =
+             val.value + " is not a leap year.";
   }
 }
 
@@ -64,7 +68,8 @@ function guessNumber(){
   let number = document.getElementById("numberToguess").value;
   if(number < 1 || number >10 )
   {
-    document.getElementById("q4").innerHTML = "The minimum number to be interd is 1 and the maximum is 10";
+    document.getElementById("q4").innerHTML =
+             "The minimum number to be interd is 1 and the maximum is 10";
   }
   else{
     let randomNumber = Math.floor(Math.random()* 10);
@@ -72,7 +77,8 @@ function guessNumber(){
 
     if(Number(number) === randomNumber)
     {
-      document.getElementById("q4").innerHTML = `Congratulations! you guess the number ${randomNumber}`;
+      document.getElementById("q4").innerHTML =
+                `Congratulations! you guess the number ${randomNumber}`;
     }else{
       document.getElementById("q4").innerHTML = "You failed! Try again";
     } 
@@ -84,7 +90,8 @@ function guessNumber(){
 // Required Features:
 // • A text display on the page, showing the number of days.
 let remainingDays = new Date("12-25-2021").getDate() - new Date().getDate();
-document.getElementById("q5").innerHTML = `${remainingDays} days remaining until Christmas!`;
+document.getElementById("q5").innerHTML =
+           `${remainingDays} days remaining until Christmas!`;
 
 // Exercise 6 – Reverse input
 // Add an input field that lets you enter a string of numbers or characters, and tie a script to it that reverses 
@@ -95,13 +102,14 @@ document.getElementById("q5").innerHTML = `${remainingDays} days remaining until
 // The page should not be refreshed.
 // • A script that reverse the input, and presents the result on the page, as a message
 function reverseString(){
-  userInput = document.getElementById("reverse").value;
-  userInputArray = userInput.split("");
+  let userInput = document.getElementById("reverse").value;
+  let userInputArray = userInput.split("");
   let result = [];
   for (let index = userInputArray.length; index >= 0; index--) {
      result.push(userInputArray[index]);
   } 
-  document.getElementById("q6").innerHTML = `The reversed string is : ${result.join().replaceAll(",", "")}`;    
+  document.getElementById("q6").innerHTML =
+             `The reversed string is : ${result.join().replaceAll(",", "")}`;    
 }
 
 // Exercise 7 – Text manipulation
@@ -114,8 +122,8 @@ function reverseString(){
 // • A script that manipulates the string and generates all combinations, and presents the result on 
 // the page, as a message
 function stringCombination(){
-  userInput = document.getElementById("textManip").value;
-  userInputArray = userInput.split("");
+  let userInput = document.getElementById("textManip").value;
+  let userInputArray = userInput.split("");
   let result = [];
   for (let i = 0; i < userInputArray.length; i++) {
     for (let j = i + 1; j <= userInputArray.length; j++) {
@@ -127,5 +135,47 @@ function stringCombination(){
   }  
   
   console.log(result);
-  document.getElementById("q7").innerHTML = `The combination of string is : ${result}`;    
+  document.getElementById("q7").innerHTML =
+             `The combination of string is : ${result}`;    
+}
+
+// Exercise 8 – Text manipulation 2
+// Add an input field that lets you enter a word, and tie a script to it that organizes the letters in 
+// alphabetical order and dislays it.
+// Example: Input: “javascript” Expected output: aaijprstv
+// Required Features:
+// • An input field that takes a word and calls the script when submitted. The page should not be 
+// refreshed.
+// • A script that manipulates the string and puts the letters in alphabetical order, and presents the 
+// result on the page, as a message.
+function alphabeticalOrder(){
+  let userInput = document.getElementById("alphabetOrder").value;
+  result = userInput.split("").sort().join().replaceAll(",",""); 
+  document.getElementById("q8").innerHTML =
+           `${userInput} string organized in alphabetical order is : ${result}`; 
+}
+
+// Exercise 9 – Text manipulation 3
+// Add an input field that lets you enter a sentence, and tie a script to it does two things; first converts the 
+// first letter of each word to upper case and second finds the word with the most letters.
+// Example: Input: “welcome to JavaScript” Expected output: Welcome To JavaScript – the longest word is 
+// JavaScript
+// Required Features:
+// • An input field that takes a sentence and calls the script when submitted. The page should not be 
+// refreshed.
+// • A script that manipulates the string and presents the result on the page.
+// o Converts the first letter of each word.
+// o Finds the longest word
+function longestWord(){
+  let userInput = document.getElementById("longestWord").value;
+  userInputArray = userInput.split(" ");
+  console.log(userInputArray)
+  result = [];
+  for (let i = 0; i < userInputArray.length; i++) {
+    //capitalize the first letter:
+    let firstLetter = userInputArray[i].charAt(0).toUpperCase();
+    result.push(firstLetter + userInputArray[i].slice(1));
+  }
+  document.getElementById("q9").innerHTML =
+           result.sort().join(",").replaceAll(",", " "); 
 }
