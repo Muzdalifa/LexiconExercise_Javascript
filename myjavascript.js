@@ -258,3 +258,29 @@ function evenOrOdd(){
   }
 }
 evenOrOdd();
+
+//TODO
+// Exercise 13 – if loop statement
+// Add a script to display the first 10 “happy numbers”.
+// https://en.wikipedia.org/wiki/Happy_number
+// Required Features:
+// • A script that will find the first 10 happy numbers and presents the result on the page, as a 
+// message
+
+
+// Exercise 14 – Array
+// Add a script to join the elements in an array into a string and display it.
+// Sample array: var workDays = [“Monday”, “Tuesday”, “Wednesday”, “Thursday”, “Friday”];
+// Expected output: Monday, Tuesday, Wednesday, Thursday and Friday are workdays.
+// Required Features:
+// • A script that will take the variables in an array and join them into a string and presents the result 
+// on the page, as a message
+function joinArray(){
+  var workDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  let result = workDays.join().replaceAll(",",", ");
+  const index = result.lastIndexOf(",");  
+  
+  document.getElementById("q14").innerHTML = result.substring(0, index)+ " and" +result.substring(index + 1)+ " are work days";
+}
+joinArray()
+
