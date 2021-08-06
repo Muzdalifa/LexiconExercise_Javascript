@@ -223,4 +223,17 @@ function checkPrimeNumber(){
   }  
 }
 
+// Exercise 11 – Type
+// Create a method in JavaScript that accepts a single value as a parameter. The method should log the 
+// value type of the parameter to the console, no matter what it is (if a string is sent in, it should output 
+// “string” to the console, etc.).
+// Required Features:
+// • An input field that takes a value and calls the script when submitted. The page should not be 
+// refreshed.
+// • A script that checks the type of the value entered and presents the result on the page, as a 
+// message
+function checkTypeValue(testValue){
+  console.log(typeof(testValue))
+}
 
+checkTypeValue(123);
