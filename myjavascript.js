@@ -294,7 +294,21 @@ joinArray()
 // • A script that will take the numbers in an array and sort the according to size and presents the 
 // result on the page, as a message
 function sortNumbers(){
-let numArray = document.getElementById("sort").value;
-  document.getElementById("q15").innerHTML = numArray.split(",").sort();
+let userInput = document.getElementById("sort").value;
+  document.getElementById("q15").innerHTML = userInput.split(",").sort();
+}
+
+// Exercise 16 – Array 3
+// Add a script that will remove duplicates items in an array.
+// Required Features:
+// • An input field that takes an array of items and calls the script when submitted. The page should 
+// not be refreshed.
+// • A script that will find the duplicates of items in the array and presents the result on the page, as 
+// a message 
+function removeDuplicate(){
+  let userInput = document.getElementById("duplicate").value;
+  //convert userInput to array then to set and then to array again using [...] for displaying
+  document.getElementById("q16").innerHTML = [...new Set(userInput.split(","))].join();
+
 }
 
