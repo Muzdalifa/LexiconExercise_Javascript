@@ -312,3 +312,16 @@ function removeDuplicate(){
 
 }
 
+// Exercise 17 – Array 4
+// Add a script that will remove the ‘null’ and ‘0’ values in an array.
+// Required Features:
+// • An input field that takes an array of values and calls the script when submitted. The page should 
+// not be refreshed.
+// • A script that will find the ‘null’ and ‘0’ values in the array and presents the result on the page, as 
+// a message
+function removeNullAndZero(){
+  let userInput = document.getElementById("nullAndZero").value;
+  console.log(userInput.split(","))
+  document.getElementById("q17").innerHTML = userInput.split(",").filter( x => x !=="" && x !=0 );
+
+}
