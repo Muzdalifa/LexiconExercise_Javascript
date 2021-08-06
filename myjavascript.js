@@ -237,3 +237,24 @@ function checkTypeValue(testValue){
 }
 
 checkTypeValue(123);
+
+// Exercise 12 – if loop statement
+// Add a script for loop that will iterate from 0-15 and for every iteration display if the number is 
+// even or odd. 
+// Expected output: “0 is even” “1 is odd” “2 is even” “3 is odd”….
+// Required Features:
+// • A script that will loop for 15 times and display if the current number is even or odd and presents 
+// the result on the page, as a message
+
+function evenOrOdd(){
+  for (let index = 0; index < 15; index++) {
+    if(index %2 === 0)
+    {
+      console.log(`${index} is even`)
+    }
+    else{
+      console.log(`${index} is odd`)
+    }    
+  }
+}
+evenOrOdd();
