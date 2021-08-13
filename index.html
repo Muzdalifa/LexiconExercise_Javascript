@@ -1,108 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Javascript exercise</title>
-  <link>
-</head>
-<body>
+  <head>
+    <title>Javascript exercises</title>
+    <link rel="stylesheet" href="mystyle.css" />
+  
+  </head>
+  <body>
+    <header>
+      <h1 href="#">Javascript Exercises</h1>
+    </header>
 
-<h2>Question 1: Current time</h2>
-<p id="currentTime"></p>
+    <main>
+      <h2>Exercise 1 – JavaScript Clock</h2>
+      <p class="question">
+        Add an element to your page that displays the current date, time and
+        which day of the week it is, and write a JavaScript script that updates
+        it every second so that it always shows the current time. The expected
+        output should be similar to: “Thursday, 07/01/2015 13:20:00”. Required
+        Features: • A text display on the page, showing weekday, date and time.
+        o The time should be updated in real time, to ensure it stays accurate.
+      </div>
+      <p id="currentTime" class="answer"></p>
 
-<h2>Question 2: Leap Year Calenda</h2>
-<label> Enter a year then press enter :</label>
-<input type="number" onkeydown="findLeapYear(this)"/>
-<p id="isLeapYear"></p>
+      <h2>Exercise 2 – Leap Year Calendar</h2>
+      <div class="question"> 
+        Add an input field that lets you enter a year, and tie a script to 
+        it that checks whether the year entered is 
+        a leap year.
+      </div>
+      <label class="question"> Enter a year then press enter :</label>
+      <input type="number" onkeydown="findLeapYear(this)" />
+      <p id="isLeapYear" class="answer"></p>
 
-<h2>Question 3: 1st of January = Sunday?</h2>
-<label> Enter a year to test if it's 1st date state on sunday :</label>
-<input type="number" id="isSunday"/>
-<button onclick="januaryFirstIsSunday()">Submit</button>
-<p id="q3"></p>
+      <h2>Exercise 3 – 1st of January = Sunday?</h2>
+      <div class="question"> 
+        Write a script that checks whether January 1st on any given year is
+         a Sunday.
+      </div>
+      <label> Enter a year to test if it's 1st date state on sunday :</label>
+      <input type="number" id="isSunday" />
+      <button onclick="januaryFirstIsSunday()" class="btn btn-primary">
+        Submit
+      </button>
+      <p id="q3" class="answer"></p>
 
-<h2>Question 4: Guessing game</h2>
-<label> Enter a number:</label>
-<input type="number" min="1" max="10" id="numberToguess"/>
-<button onclick="guessNumber()">Submit</button>
-<p id="q4"></p>
+      <h2>Exercise 4 – Guessing game</h2>
+      <div class="question"> 
+        Add an input field that lets you enter a number between 1 and 10, and tie
+        a script to it that checks  whether the number entered is the same as a
+        random number created by the script.
+      </div>
+      <label> Enter a number:</label>
+      <input type="number" min="1" max="10" id="numberToguess" />
+      <button onclick="guessNumber()" class="btn btn-primary">Submit</button>
+      <p id="q4" class="answer"></p>
 
-<h2>Question 5: Days until Christmas</h2>
-<p id="q5"></p>
+      <h2>Exercise 5 – Days until Christmas</h2>
+      <div class="question"> 
+        Add an element to your page that displays the days until Christmas.
+      </div>
+      <p id="q5" class="answer"></p>
 
-<h2>Question 6:  Reverse input</h2>
-<label> Enter a string :</label>
-<input type="text" id="reverse"/>
-<button onclick="reverseString()">Reverse</button>
-<p id="q6"></p>
+      <h2>Exercise 6 – Reverse input</h2>
+      <div class="question"> 
+         Add an input field that lets you enter a string of numbers or characters,
+         and tie a script to it that reverses the input and prints it on the page.
+         Example: Input, 12345, Expected output: 54321
+      </div>
+      <label> Enter numbers:</label>
+      <input type="text" id="reverse" />
+      <button onclick="reverseString()" class="btn btn-primary">Submit</button>
+      <p id="q6" class="answer"></p>
 
-<h2>Question 7: Text manipulation</h2>
-<label> Enter a string :</label>
-<input type="text" id="textManip"/>
-<button onclick="stringCombination()">String combination</button>
-<p id="q7"></p>
+      <h2>Exercise 7 – Text manipulation</h2>
+      <div class="question">  
+         Add an input field that lets you enter a word, and tie a script to it that
+         generates all combinations of that word.
+         Example: Input: “Text” Expected output: T, Te, Tex, Text, e, ex, ext, x, xt, t
+      </div>
+      <label> Enter a word :</label>
+      <input type="text" id="textManip" />
+      <button onclick="stringCombination()" class="btn btn-primary">
+        Submit
+      </button>
+      <p id="q7" class="answer"></p>
 
-<h2>Question 8: Text manipulation2</h2>
-<label> Enter a string :</label>
-<input type="text" id="alphabetOrder"/>
-<button onclick="alphabeticalOrder()">Organize word alphabetically</button>
-<p id="q8"></p>
+      <h2>Exercise 8 – Text manipulation 2</h2>
+      <div class="question">        
+        Add an input field that lets you enter a word, and tie a script to it
+        that organizes the letters in alphabetical order and dislays it.
+        Example: Input: “javascript” Expected output: aaijprstv
+      </div>
+      <label> Enter a string :</label>
+      <input type="text" id="alphabetOrder" />
+      <button onclick="alphabeticalOrder()" class="btn btn-primary">
+        Submit
+      </button>
+      <p id="q8"></p>
 
-<h2>Question 9: Text manipulation3</h2>
-<label> Enter a string :</label>
-<input type="text" id="longestWord"/>
-<button onclick="longestWord()">Organize sentence alphabetically</button>
-<p id="q9"></p>
+      <h2>Question 9: Text manipulation3</h2>
+      <div class="question">
+        Exercise 9 – Text manipulation 3
+        Add an input field that lets you enter a sentence, and tie a script to it does 
+        two things; first converts the first letter of each word to upper case and second 
+        finds the word with the most letters. Example: Input: “welcome to JavaScript” 
+        Expected output: Welcome To JavaScript – the longest word is JavaScript
+      </div>
+      <label> Enter a string :</label>
+      <input type="text" id="longestWord" />
+      <button onclick="longestWord()" class="btn btn-primary">submitt</button>
+      <p id="q9" class="answer"></p>
 
-<h2>Question 10: Prime number</h2>
-<label> Enter a number :</label>
-<input type="number"  id="isPrime"/>
-<button onclick="checkPrimeNumber()">Submit</button>
-<p id="q10"></p>
+      <h2>Question 10: Prime number</h2>
+      <div class="question">
+        Exercise 10 – Prime number
+        Add an input field that lets you enter a number, and tie a script to it that
+        checks whether the number entered is a prime or not.  
+      </div>
+      <label> Enter a number :</label>
+      <input type="number" id="isPrime" />
+      <button onclick="checkPrimeNumber()" class="btn btn-primary">
+        Submit
+      </button>
+      <p id="q10" class="answer"></p>
 
-<h2>Question 11: Type</h2>
-<p> The answer is in a console.</p>
+      <h2>Exercise 11 – Type</h2>
+      <div class="question">        
+        Create a method in JavaScript that accepts a single value as a parameter. 
+        The method should log the value type of the parameter to the console, 
+        no matter what it is (if a string is sent in, it should output “string”
+        to the console, etc.). 
+      </div>
+      <p class="answer">The answer is in a console.</p>
 
-<h2>Question 12: Odd or Even</h2>
-<p> The answer is in a console.</p>
+      <h2>Exercise 12 – if loop statement</h2>
+      <div class="question">        
+        Add a script for loop that will iterate from 0-15 and for every iteration
+        display if the number is even or odd. Expected output: “0 is even” “1 is
+        odd” “2 is even” “3 is odd”….  
+      </div>
+      <p class="answer">The answer is in a console.</p>
 
-<h2>Question 13: if loop statement</h2>
-<p> First 10 "happy numbers": </p>
-<span id="q13"></span>
+      <h2>Exercise 13 – if loop statement</h2>
+      <div class="question">        
+        Add a script to display the first 10 “happy numbers”.
+        <a>https://en.wikipedia.org/wiki/Happy_number </a>  
+      </div>
+      <p id="q13" class="answer">Not done</p>
 
-<h2>Question 14: Array</h2>
-<p> Join the elements in an array into a string: </p>
-<span id="q14"></span>
+      <h2>Question 14: Array</h2>
+      <div class="question">
+        Exercise 14 – Array
+        Add a script to join the elements in an array into a string and display it.
+        Sample array: var workDays = [“Monday”, “Tuesday”, “Wednesday”, “Thursday”, “Friday”];
+        Expected output: Monday, Tuesday, Wednesday, Thursday and Friday are workdays.
+      </div>
+      <p id="q14" class="answer"></p>
 
-<h2>Question 15: Array2</h2>
-<label> Enter an array of numbers without [] ex:1,0,-4,20,7 :</label>
-<input type="text"  id="sort"/>
-<button onclick="sortNumbers()">Sort</button>
-<p id="q15"></p>
+      <h2>Exercise 15 – Array 2</h2>
+      <div class="question">        
+        Add a script that will sort the numbers in an array according to size and 
+        display it. Sample array: var numbers = [4, 1, 9, -2, 5]
+        Expected output: -2, 1, 4, 5, 9. 
+      </div>
+      <label> Enter an array of numbers without [] ex:1,0,-4,20,7 :</label>
+      <input type="text" id="sort" />
+      <button onclick="sortNumbers()" class="btn btn-primary">Submit</button>
+      <p id="q15" class="answer"></p>
 
-<h2>Question 16: Array3</h2>
-<label> Enter an array :</label>
-<input type="text"  id="duplicate"/>
-<button onclick="removeDuplicate()">Remove duplicate</button>
-<p id="q16"></p>
+      <h2>Exercise 16 – Array 3</h2>
+      <div class="question">        
+        Add a script that will remove duplicates items in an array.
+      </div>
+      <label> Enter an array :</label>
+      <input type="text" id="duplicate" />
+      <button onclick="removeDuplicate()" class="btn btn-primary">
+        Submit
+      </button>
+      <p id="q16" class="answer"></p>
 
-<h2>Question 17: Array4</h2>
-<label> Enter an array :</label>
-<input type="text"  id="nullAndZero"/>
-<button onclick="removeNullAndZero()">Remove null and zero</button>
-<p id="q17"></p>
+      <h2>Exercise 17 – Array 4</h2>
+      <div class="question">
+        Add a script that will remove the ‘null’ and ‘0’ values in an array. 
+      </div>
+      <label> Enter an array :</label>
+      <input type="text" id="nullAndZero" />
+      <button onclick="removeNullAndZero()" class="btn btn-primary">
+        Submit
+      </button>
+      <p id="q17" class="answer"></p>
 
-<h2>Question 18: Number of days in a month</h2>
-<label> Enter a month:</label>
-<input type="text"  id="month"/>
-<br>
-<label> Enter a year :</label>
-<input type="number"  id="year"/>
-<button onclick="numberOfDaysInMonth()">Get number of days</button>
-<p id="q18"></p>
+      <h2>Exercise 18 – Number of days in a month</h2>
+      <div class="question">
+        Add a script that will find and display the number of days in a given month.
+      </div>
+      <div class="grid-container">    
+        <div class="item1">
+          <label> Enter a month:</label>
+        </div>
+        <div class="item2">
+          <input type="text" id="month" />
+        </div>
+        <div class="item3">
+          <label> Enter a year :</label>
+        </div>
+        <div class="item4">
+          <input type="number" id="year" />
+        </div>
+        <div class="item5">
+          <button onclick="numberOfDaysInMonth()" class="btn btn-primary">
+            Submit
+          </button>
+        </div>   
+      </div>   
+      <p id="q18" class="answer"></p>
 
+      <h2>Exercise 19 – Time Convertion</h2>
+      <div class="question">        
+        Add a script that will convert the number of minutes into hours and
+        minutes. Sample input: 96. Expected output: 1 hour(s) and 32 minute(s).
+      </div>
+      <label> Enter minutes :</label>
+      <input type="number" id="minutes" />
+      <button onclick="convertMinutesToHour()" class="btn btn-primary">
+        Submit
+      </button>
+      <p id="q19" class="answer"></p>
 
-<script src="myjavascript.js">
-</script>
+      <h2>Exercise 20 – Get the age</h2>
+      <div class="question">        
+        Add a script that will calculate the age from a given year. Sample input: 1980
+        Expected output: The age is 36.  
+      </div>
+      <label> Enter a birth year :</label>
+      <input type="number" id="age" />
+      <button onclick="ConvertYearToage()" class="btn btn-primary">
+        Submit
+      </button>
+      <p id="q20" class="answer"></p>
+    </main>
 
-</body>
+    <footer>
+      Prepared by <a href="https://www.linkedin.com/in/muzdalifa-ali/">Muzdalifa Ali</a>
+    </footer>
+
+    <script src="myjavascript.js"></script>
+  </body>
 </html>
